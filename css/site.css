@@ -1,0 +1,241 @@
+/* Body style */
+body {
+    margin: 0;
+}
+
+/* Header and footer style */
+header, footer {
+    background-color: rgb(65, 132, 42);
+    color: #eee;
+}
+
+/* Header background image */
+header {
+    background-image: url('../imgs/hand-grips-a-gardening-tool-to-cut-back-a-plant.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Title styles */
+h1 {
+    font-family: "Century Gothic", serif;
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 400%;
+    text-align: center;
+    background-color: rgba(5, 72, 12, .5);
+    margin: 0;
+}
+
+/* Subtitle and section headers */
+h2, h3, dt {
+    font-family: "Gabriola", sans-serif;
+}
+h2 {
+    font-size: 2em;
+    color: rgb(35, 102, 12);
+}
+
+/* Footer specific styles */
+footer {
+    font-size: smaller;
+    padding: 10px 10%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer > div {
+    flex-grow: 1;
+    padding-left: 10%;
+}
+#copyright {
+    font-family: serif;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+}
+
+/* Navigation styles */
+nav {
+    text-align: center;
+}
+nav a {
+    font-family: "Century Gothic", serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(35, 102, 12);
+    display: inline-block;
+    padding: 10px 40px;
+}
+nav a:hover {
+    text-shadow: 0px 0px 1px rgb(20, 70, 20);
+}
+
+/* Main style */
+main {
+    border-left: 2px solid rgb(158, 194, 143);
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Header link styles */
+h1 a {
+    text-decoration: none;
+    color: #eee;
+}
+h1 a:hover {
+    text-shadow: 2px 2px 10px white;
+}
+
+/* Item33 styles */
+.item33 {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+
+/* Footer navigation styles */
+footer nav {
+    display: inline-block;
+}
+footer nav a {
+    color: #eee;
+    display: block;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+}
+
+/* Icon styles */
+.icon {
+    display: block;
+    font-size: 3em;
+    color: rgb(35, 102, 12);
+}
+
+/* Item25 styles */
+.item25 {
+    width: 23%;
+    text-align: center;
+    box-shadow: 0px 0px 20px #eee;
+}
+#multicol {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Categories section styles */
+#categories {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+#categories section {
+    overflow: auto;
+}
+#categories img {
+    width: 100%;
+    object-fit: cover;
+}
+#categories h3 {
+    margin-top: 0;
+}
+#categories section:nth-of-type(1) {
+    grid-row: 1 / 3;
+}
+
+/* Wrapper style */
+.wrapper {
+    width: 90%;
+}
+
+/* Hero image */
+#heroimg {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Image styles */
+img {
+    width: 100px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* List styles */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* Footer text alignment */
+nav, #copyright {
+    text-align: center;
+}
+
+/* Desktop layout */
+#pagecontainer {
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+header, footer {
+    grid-column: 1 / -1;
+}
+
+/* Responsive view for tablet devices (viewport width below 1024px) */
+@media (max-width: 1024px) {
+    #pagecontainer {
+        display: block;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 10px; /* Adjust padding for tablet view */
+    }
+    nav a {
+        padding: 10px 30px; /* Adjust padding for tablet view */
+        font-size: 1.2em;  /* Adjust font size */
+    }
+    footer nav ul {
+        flex-direction: column;
+    }
+}
+
+/* Responsive view for mobile devices (viewport width below 760px) */
+@media (max-width: 760px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    nav a {
+        padding: 10px 40px;
+        font-size: 1em; /* Reverting font size */
+    }
+    #multicol {
+        flex-wrap: wrap;
+    }
+    footer > div {
+        width: 100%;
+    }
+    #categories {
+        grid-template-columns: 1fr 1fr;
+    }
+    h1 {
+        font-size: 1.5em; /* Adjust the size as needed */
+    }
+    .gold-shelf-img,
+    img {
+        width: 75px;  /* Adjust the size as needed */
+        height: 150px; /* Adjust the size as needed */
+    }
+}
+
+/* Styling the Gold Shelf with Green Vine House Plant image */
+.gold-shelf-img {
+    width: 150px; 
+    height: 700px; 
+}
